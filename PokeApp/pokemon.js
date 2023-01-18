@@ -1,5 +1,5 @@
 const queryString = window.location.search
-const product = new URLSearchParams(queryString).get('id');
+const idPokemon = new URLSearchParams(queryString).get('id');
 
 
 const getData = (url) => {
@@ -18,5 +18,5 @@ const printPokemon = (pokemon) => {
     document.body.append(div)
 }
 
-getData(`https://pokeapi.co/api/v2/pokemon/${product}`)
+getData(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
     .then( res => printPokemon(res))
